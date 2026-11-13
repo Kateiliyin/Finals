@@ -1,0 +1,589 @@
+import random
+import time
+import sys
+
+name = input("Enter your name: ")
+
+print("")
+
+start = input("Press B to begin > ")
+if start.lower() != "b":
+    print("You must Press B.")
+    exit()
+
+print("You may now proceed.")
+
+print("")
+
+print("┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ • ┈┈┈┈┈┈┈┈┈┈ ◎ ◎┈┈┈┈┈┈┈┈┈ • ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈")
+print("                              PYTHON TUTORIAL")
+print("┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ • ┈┈┈┈┈┈┈┈┈┈ ◎ ◎┈┈┈┈┈┈┈┈┈ • ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈")
+print("")
+
+print(f"Welcome, {name}.")
+print("Today, I will be showing you the basic steps on how to make your own Python code. ")
+print("I will be separating the topics into 4 parts")
+print("so that it will be easier for you to follow and understand.")
+print("By the end, you will be able to make your own Python program.")
+
+print("")
+print("Now Let us begin!")
+
+print("")
+
+enter = input("Press Enter to begin > ")
+if enter != "":
+    print("You must Press Enter only.")
+    exit()
+    
+print("")
+print("_" * 45)
+print("PART 1: Python Basics - Syntax")
+print("You maybe wondering: What is a syntax?")
+print("")
+print("Well...")
+print("")
+print("Syntax means the RULES of how you write Python.")
+print("If you break the rules, Python will give you an ERROR.")
+print("")
+
+print("")
+
+print("Moving on.")
+print("1. CASE SENSITIVITY")
+print("Python cares about CAPITAL and small letters.")
+print("print and Print are NOT the same!")
+print("")
+print("Example:")
+print("""print("Hello)  -> This WORKS""")
+print("""Print("Hello")  -> This is an ERROR, because P is capital""")
+print("")
+print("Always REMEMBER: all Python commands are in lowercase.")
+print("")
+print("2. INDENTATION (SPACES)")
+print("After a colon (:), you MUST indent/putspaces.")
+print("This tells Python what belongs inside.")
+print("")
+print("Example:")
+print("if True:")
+print("""    print("hi")""")
+print("")
+print("If you forget the spaces, Python will be confused and show")
+print("IndentationError.")
+print("")
+print("3. print() - SHOW SOMETHING ON SCREEN")
+print("print() is used to show text or results.")
+print("")
+print("Examples:")
+print("""print("Hello")      -> shows: Hello""")
+print("""print(5 + 5)        -> shows: 10""")
+print("""print("I am", 15)   -> shows: I am 15""")
+print("")
+print("4. VALUE TYPES - WHAT KIND OF DATA?")
+print("Every value in Python has a type.")
+print("")
+print("String (str)  = text inside quotes")
+print("""Example: "hello", "Joy", "18" """)
+print("")
+print("Integer (int) = whole number, no decimal")
+print("Example: 25, 0, -5")
+print("")
+
+
+while True:
+    choice = input("Type CONTINUE to proceed to the next topic or Q to quit > ")
+
+    if choice.lower() == "q":
+        print("Since you have chosen to quit, you may now exit the program. Good day.")
+        sys.exit()
+
+    elif choice.upper() == "CONTINUE":
+        print("Moving on to the next topic...")
+        break
+
+    else:
+        print("Invalid! You must type CONTINUE or Q. Stopping program.")
+        sys.exit()
+    
+print("")
+print("_" * 45)
+print("ꜰᴜɴ ꜰᴀᴄᴛ 1: ɪꜰ ʏᴏᴜ ᴡʀɪᴛᴇ ᴘʀɪɴᴛ(\"ʜᴇ ꜱᴀɪᴅ \"ʜɪ\"\") ɪᴛ ᴡɪʟʟ ᴇʀʀᴏʀ, ʙᴇᴄᴀᴜꜱᴇ ᴘʏᴛʜᴏɴ ᴛʜɪɴᴋꜱ ᴛʜᴇ ꜱᴛʀɪɴɢ ᴇɴᴅᴇᴅ ᴀᴛ ᴛʜᴇ ꜱᴇᴄᴏɴᴅ \".")
+print("")
+print("")
+print("PART 2: Variables and Data Typings")
+print("What is a Variable?")
+print("A variable is actually just like a box because this is where you can store something.")
+print("Also, in that box, you can give it any sorts of names you can think of,")
+print("then you can use i later.")
+print("""Example:
+                 name = "Joy"
+                 age = 18
+
+                 print(name)  -> shows: Joy
+                 print(age)   -> shows: 18""")
+            
+print("")
+print("""ʀᴇᴍɪɴᴅᴇʀ ɪɴ ᴄᴀꜱᴇ ʏᴏᴜ ʜᴀᴠᴇ ꜰᴏʀɢᴏᴛᴛᴇɴ: ᴅᴏ ɴᴏᴛ ᴜꜱᴇ ᴜᴘᴘᴇʀᴄᴀꜱᴇ ᴡʜᴇɴ ɴᴀᴍɪɴɢ ʏᴏᴜʀ "ʙᴏx""""")
+print("")
+print("""COMMENTS - NOTES
+A comment starts with #, and Python IGNORES it.
+
+   Example:
+   # This is my name
+   name = "Kritchell"
+
+To make it clear: It basically doesn't show up when you run your program. Though you can see it in your code, again, just not when you're running your program.
+
+
+DATA TYPES - 4 MAIN TYPES YOU MUST KNOW:
+
+   1. int    = whole number
+               Example: age = 15
+
+   2. float  = number with decimal
+               Example: price = 3.14
+
+   3. str    = text inside " " or ' '
+               Example: name = "John"
+
+   4. bool   = True or False only
+               Example: is_student = True""")
+print("")
+
+while True:
+    choice = input("Type CONTINUE to proceed to the next topic or Q to quit > ")
+
+    if choice.lower() == "q":
+        print("Since you have chosen to quit, you may now exit the program. Good day.")
+        sys.exit()
+
+    elif choice.upper() == "CONTINUE":
+        print("Moving on to the next topic...")
+        break
+
+    else:
+        print('Invalid! You must type CONTINUE or Q. Stopping program.')
+        sys.exit()
+    
+print("")
+print("_" * 45)
+print("""ꜰᴜɴ ꜰᴀᴄᴛ 2: ᴛᴏ ꜰɪx ɪᴛ, ᴀᴅᴅ \\ ʙᴇꜰᴏʀᴇ ᴛʜᴇ ɪɴꜱɪᴅᴇ Qᴜᴏᴛᴀᴛɪᴏɴ: ᴘʀɪɴᴛ(\"ʜᴇ ꜱᴀɪᴅ "ʜɪ") - ᴛʜᴀᴛ ᴛᴇʟʟꜱ ᴘʏᴛʜᴏɴ ᴛʜᴇ " ɪꜱ ᴘᴀʀᴛ ᴏꜰ ᴛʜᴇ ᴛᴇxᴛ.""")
+print("")
+print("PART 3: Conditions")
+print("Conditions is where you let YOUR PROGRAM DECIDE what to do.")
+print("""We use: if / elif / else
+
+   Example:
+   age = 15
+
+   if age >= 18:
+       print("Adult")
+   elif age >= 13:
+       print("Teen")
+   else:
+       print("Child")
+
+   -> Output: Teen
+
+LOGICAL OPERATORS:
+
+   and = BOTH must be True
+   or  = AT LEAST ONE must be True
+   not = OPPOSITE / REVERSE
+
+   Example:
+   if age >= 16 and has_id == True:
+       print("You can enter")""")
+print("")
+
+
+while True:
+    choice = input("Type CONTINUE to proceed to the next topic or Q to quit > ")
+
+    if choice.lower() == "q":
+        print("Since you have chosen to quit, you may now exit the program. Good day.")
+        sys.exit()
+
+    elif choice.upper() == "CONTINUE":
+        print("Moving on to the next topic...")
+        break
+
+    else:
+        print('Invalid! You must type CONTINUE or Q. Stopping program.')
+        sys.exit()
+
+print("")
+print("_" * 45)
+print("ꜰᴜɴ ꜰᴀᴄᴛ 5: ɪꜰ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴘʀɪɴᴛ ᴀ ʟᴏᴛ ᴏꜰ Qᴜᴏᴛᴀᴛɪᴏɴꜱ, ᴜꜱᴇ ᴛʀɪᴘʟᴇ Qᴜᴏᴛᴇꜱ: ᴘʀɪɴᴛ(\"\"\"ʜᴇ ꜱᴀɪᴅ \"ʜɪ\" ᴀɴᴅ ꜱʜᴇ ꜱᴀɪᴅ 'ʜᴇʟʟᴏ'\"\"\")")
+print("")
+print("PART 4: LOOPINGS")
+print("What is a Loop?")
+print("A loop is where the codes gets reapeted without needing you to copy and paste everything over and over again.")
+print("""1. for LOOP - When you KNOW how many times to repeat
+
+   Example:
+   for i in range(5):
+       print(i)
+   -> Output: 0, 1, 2, 3, 4
+
+2. while LOOP - Repeat WHILE a condition is True
+
+   Example:
+   count = 1
+   while count <= 3:
+       print(count)
+       count = count + 1
+   -> Output: 1, 2, 3""")
+   
+print("")
+
+print("....")
+input("Enter")
+input("Enter")
+input("Enter...")
+input("Enter ???")
+print("")
+
+def press(key, text):
+    while True:
+        ans = input(text)
+
+        if ans.lower() == key:
+            print("")
+            break
+        else:
+            print("Nope! Press " + key.upper() + "! Try again.")
+
+print("")
+print(name)
+print(name)
+print("")
+print("")
+time.sleep(9)
+input("... ")
+print("")
+
+print("You wake up on a cold floor. It's cold. It's wet.")
+print("Your head hurts.")
+time.sleep(1)
+print("")
+
+press("w", "Press W to get up... W > ")
+time.sleep(3)
+print("")
+
+print("You: ...ugh... where... where am I?")
+press("c", "Press C to continue > ")
+time.sleep(3)
+print("")
+
+print("You: Hello? HELLO?! Is anyone there?!")
+press("c", "Press C to continue > ")
+time.sleep(4)
+print("")
+
+print("You: Why can't I see anything... this isn't my room...")
+print("You: My eyes... okay okay calm down... calm down...")
+press("c", "Press C to continue > ")
+time.sleep(6)
+print("")
+
+print("...")
+time.sleep(1)
+print("")
+
+print("* THUMP *")
+print("A pipe drops somewhere far away.")
+print("")
+print("")
+print("You: WHAT WAS THAT?!")
+time.sleep(1)
+print("You: Who's there?!")
+press("c", "Press C to continue > ")
+time.sleep(1)
+print("")
+
+print("You: Okay okay I have to get out, I have to get out right now.")
+press("c", "Press C to continue > ")
+time.sleep(3)
+print("")
+
+print("You: Where's the exit? Where's the door?!")
+press("c", "Press C to continue > ")
+time.sleep(3)
+
+print("You: I can't see shit in here...")
+print("Keep walking...")
+print("")
+time.sleep(6)
+
+for i in range(3):
+    press("w", "Press W to walk > ")
+
+    if i == 0:
+        print("You walk... you hit a wall... your hand is shaking.")
+    elif i == 1:
+        print("You walk... it's just more empty hallway... what the hell is this place?")
+    else:
+        print("You walk... your shoes are squeaking on the floor... it's too quiet...")
+
+    time.sleep(2)
+
+print("")
+
+print("You: I've been walking for like 30 minutes! This doesn't make any sense!")
+time.sleep(2)
+print("You: This building is too big... this is not normal...")
+press("c", "Press C to continue > ")
+time.sleep(1)
+
+print("_" * 45)
+print("")
+
+print("You bump into something hard...")
+time.sleep(1)
+print("A desk. Dusty. With a flashlight and a piece of paper on it.")
+print("_" * 45)
+print("")
+
+press("e", "Press E to take the items > ")
+
+print("You picked them up.")
+print("")
+
+time.sleep(2)
+print("You: What the hell is this? A flashlight? A note?")
+print("")
+
+print("You: Is this some kind of prank? This isn't funny!")
+press("c", "Press C to continue > ")
+time.sleep(1)
+print("")
+
+print("You check the flashlight.")
+press("e", "Press E to check the flashlight battery > ")
+time.sleep(1)
+
+print("")
+
+print("You shake it. It's heavy.")
+print("")
+print("There are batteries inside. Still full. Brand new.")
+press("f", "Press F to turn on the flashlight > ")
+time.sleep(1)
+print("")
+
+print("_" * 45)
+print("")
+
+print("* CLICK *")
+print("The flashlight turns on. The light flickers for a second.")
+print("_" * 45)
+time.sleep(2)
+print("")
+
+print("You: Okay okay okay it works, it works!")
+print("You: Oh thank god...")
+press("c", "Press C to continue > ")
+time.sleep(4)
+print("")
+
+print("You: ...wait... why is there a perfectly good flashlight here?")
+print("")
+
+print("You: In an abandoned building? With full batteries?")
+time.sleep(2)
+print("You: No... no no no someone left this here for me...")
+press("c", "Press C to continue > ")
+print("")
+
+print("_" * 45)
+print("")
+
+print("You inspect the paper...")
+time.sleep(1)
+
+print(""" NOTE: Answer the 5 Python questions in the notebooks. 
+               It hates wrong answers.  
+                                 
+                                 - ??? """)
+time.sleep(2)
+print("")
+
+print("_" * 45)
+print("")
+
+press("c", "Press C to continue > ")
+
+print("You: ...what? Answer Python questions? Notebooks?")
+print("You: So I have to find 5 notebooks now?! Are you kidding me?!")
+time.sleep(4)
+print("")
+
+input("Press ENTER to start searching...")
+
+print("_" * 45)
+print("")
+
+print("You found the notebooks. Find a way to escape.")
+print("_" * 45)
+time.sleep(4)
+print("")
+
+print("5 Python questions. Fail 2 times and it will chase you.")
+print("")
+time.sleep(3)
+
+fails = 0
+chase_count = 0
+
+for i in range(1, 6):
+    q_type = random.randint(1, 5)
+
+    if q_type == 1:
+        print("Notebook " + str(i) + "/5: What does print() do?")
+        print('print("hello")')
+        print("")
+        print("A. It shows hello on the screen")
+        print("B. It deletes hello")
+        print("C. It asks you to type hello")
+        print("D. It saves hello")
+        correct = "a"
+
+    elif q_type == 2:
+        print("Notebook " + str(i) + "/5: What does this code print?")
+        print('print("hi" * 3)')
+        print("")
+        print("A. hihihi")
+        print("B. hi hi hi")
+        print("C. hi3")
+        print("D. 333")
+        correct = "a"
+
+    elif q_type == 3:
+        print("Notebook " + str(i) + "/5: What does while True: mean?")
+        print("while True:")
+        print("")
+        print("A. Loop one time only")
+        print("B. Loop forever until you break it")
+        print("C. Stop the game")
+        print("D. Skip the loop")
+        correct = "b"
+
+    elif q_type == 4:
+        print("Notebook " + str(i) + "/5: What does break do?")
+        print("break")
+        print("")
+        print("A. Leaves the loop right away")
+        print("B. Restarts the loop")
+        print("C. Pauses the game")
+        print("D. Prints break")
+        correct = "a"
+
+    else:
+        print("Notebook " + str(i) + "/5: Why do we use .lower()?")
+        print('ans.lower() == "w"')
+        print("")
+        print("A. To make the text louder")
+        print("B. To delete ans")
+        print("C. So W and w both count as correct")
+        print("D. To make ans a number")
+        correct = "c"
+
+    print("")
+
+    if i == 5:
+        print("RUN")
+        print("Press R to run, so you know what happens next...")
+
+    while True:
+        answer = input("Your answer A/B/C/D > ")
+
+        if answer.lower() in ["a", "b", "c", "d"]:
+            break
+        else:
+            print("Nope! Press A, B, C, or D!")
+
+    if answer.lower() == correct:
+        print("Correct... but you hear footsteps behind you...")
+        print("")
+        time.sleep(1)
+
+    else:
+        fails = fails + 1
+
+        print("")
+        print("_" * 45)
+        print("WRONG! | Fails: " + str(fails) + "/2")
+        print("Your heart begins beating fast...")
+        print("You hear footsteps...")
+        print("_" * 45)
+
+        if fails == 1:
+            print(random.choice(['You: WHAT THE HELL WAS THAT?!', 'You: OH SHIT IT HEARD ME!', 'You: NO NO NO NO NO!']))
+            print("")
+
+        if fails >= 2:
+            chase_count += 1
+
+            print("")
+            print("IT'S COMING! YOU HAVE TO RUN!")
+
+            if chase_count == 1:
+                print("You: WHAT THE FUCK IS THAT THING?!")
+            elif chase_count == 2:
+                print("You: GET AWAY FROM ME! GET AWAY FROM ME!")
+            else:
+                print("You: PLEASE! LEAVE ME ALONE! PLEASE!")
+
+            print("Your heart is beating faster and faster!")
+            print("Keep running! It's right behind you!")
+
+            press("r", "PRESS R TO RUN > ")
+
+            print("You ran, but you can still hear it behind you...")
+            print("")
+            fails = 0
+            time.sleep(1)
+
+print("_" * 45)
+print(" IT CAUGHT YOU")
+print("_" * 45)
+time.sleep(7)
+
+print("You cannot escape this place. No matter where you hide,")
+print("no matter how much you run...")
+time.sleep(3)
+print("...")
+time.sleep(2)
+
+press("c", "Press C to continue > ")
+time.sleep(1)
+
+print("Ever noticed how it was not coming at you at full speed?")
+press("c", "Press C to continue > ")
+time.sleep(1)
+
+print("The footsteps were slow... too slow...")
+time.sleep(1)
+print("")
+print("Until the final question...")
+time.sleep(3)
+press("c", "Press C to continue > ")
+
+print("It was toying with you...")
+print("")
+time.sleep(1)
+print("From the very start...")
+print("")
+time.sleep(1)
+print("It was never trying to catch you...")
+print("")
+time.sleep(1)
+print("It was making you think you could escape...")
+time.sleep(1)
+
+print("_" * 45)
+print("")
+print(" GAME OVER - YOU HAVE WON THE BADGE 'NO ESCAPE'")
+
