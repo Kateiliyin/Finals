@@ -40,14 +40,16 @@ print("┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈ 
 print("")
 
 print(f"Welcome, {name}.")
+time.sleep(1)
 print("Today, I will be showing you the basic steps on how to make your own Python code. ")
+time.sleep(1)
 print("I will be separating the topics into 4 parts")
 print("so that it will be easier for you to follow and understand.")
 print("By the end, you will be able to make your own Python program.")
-
+time.sleep(1)
 print("")
 print("Now Let us begin!")
-
+time.sleep(2)
 print("")
 
 while True:
