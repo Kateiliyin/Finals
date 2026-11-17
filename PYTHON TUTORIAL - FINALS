@@ -100,7 +100,7 @@ print("""print() is used to show text or results.
        print("I am", 15)   -> shows: I am 15""")
 print("")
 print("4. VALUE TYPES - WHAT KIND OF DATA?")
-print("""Every value in Python has a type."
+print("""Every value in Python has a type.
        String (str)  = text inside quotes
        Example: "hello", "Joy", "18" """)
 print("")
@@ -182,7 +182,7 @@ while True:
     
 print("")
 print("_" * 45)
-print("""FUN FACT 3: You cannot use spaces in a variable name. "my name" is an error, my_name is correct.""")
+print("""FUN FACT 3: You cannot use spaces in a variable name. "my name" is an error; my_name is correct.""")
 print("")
 print("PART 3: Conditions")
 print("Conditions is where you let YOUR PROGRAM DECIDE what to do.")
@@ -225,7 +225,7 @@ while True:
 
 print("")
 print("_" * 45)
-print("""FUN FACT 4: Do NOT use if again and again, use elif.
+print("""FUN FACT 4: Do NOT use if again and again; use elif.
          If you use if 3 times, Python checks ALL 3, even if the first one was already true.""")
 print("")
 
@@ -393,8 +393,12 @@ print("You: In an abandoned building? With full batteries?")
 time.sleep(1)
 
 print("You: No... no no no someone left this here for me...")
+time.sleep(1)
+print("...But... Why?")
+time.sleep(3)
 press("c", "Press C to continue > ")
 print("")
+print("No.. Doesn't matter. I just need to get out of here...")
 print("_" * 45)
 print("")
 print("You inspect the paper...")
@@ -408,7 +412,8 @@ print("_" * 45)
 print("")
 press("c", "Press C to continue > ")
 print("You: ...what? Answer Python questions? Notebooks?")
-print("You: So I have to find 5 notebooks now?! Are you kidding me?!")
+time.sleep(2)
+print("You: So I have to find 5 notebooks now? Are you kidding me?!")
 time.sleep(1)
 
 print("")
@@ -496,19 +501,19 @@ for i in range(1, 6):
         print("You hear footsteps...")
         print("_" * 45)
         if fails == 1:
-            print(random.choice(['You: WHAT THE HELL WAS THAT?!', 'IT HEARD YOU', 'You: NO NO NO NO NO!']))
+            print(random.choice(['You: WHAT THE HELL WAS THAT?!', 'IT HEARD YOU', 'You: NO! STOP!']))
             print("")
         if fails >= 2:
             chase_count += 1
             print("")
             print("IT'S COMING! YOU HAVE TO RUN!")
             if chase_count == 1:
-                print("You: WHAT THE FUCK IS THAT THING?!")
+                print("You: WHAT IS THAT THING?!")
             elif chase_count == 2:
-                print("You: GET AWAY FROM ME! GET AWAY FROM ME!")
+                print("You: I JUST WANT TO GO HOME!")
             else:
-                print("You: PLEASE! LEAVE ME ALONE! PLEASE!")
-            print("Your heart is beating faster and faster!")
+                print("You: PLEASE! LEAVE ME ALONE!")
+            print("Your heart is beating faster and faster...")
             print("Keep running! It's right behind you!")
             press("r", "PRESS R TO RUN > ")
             print("You ran, but you can still hear it behind you...")
